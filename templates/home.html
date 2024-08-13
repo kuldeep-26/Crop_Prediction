@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Friends</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Inline CSS corrections for buttons */
+        .btn-primary {
+            padding: 10px 20px;
+            color: antiquewhite;
+            background-color: dodgerblue;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(10, 116, 222);
+            text-decoration: none;
+        }
+
+        ::-webkit-scrollbar{
+            scrollbar-width: none;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin-top: 50px;
+            margin-left: 200px ;
+        }
+
+        .welcome-text {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .welcome-heading {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .welcome-heading span {
+            color: rgb(181, 21, 21)
+        }
+
+        .welcome-image {
+            width: 500px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header style="margin-top: -85px; width: 1450px;">
+        <div class="logo" style="display: flex;">
+            <img src="https://img.freepik.com/premium-photo/aipowered-agricultural-robot-tending-crops_978155-106.jpg" alt="Farmer Friends" style="border-radius: 50%; width: 90px; height: 90px;">
+            <p style="color: black; font-size: 3.5rem; margin-left: 10px; margin-top: 18px;"><span style="color: rgb(195, 21, 21);">Farmer</span> Friends</p>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <section id="home">
+                <div class="welcome-section">
+                    <div class="welcome-text" style="margin-right: -100px; background-color: #f1f1f1; padding: 3rem 0rem;">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/616/212/small_2x/ai-generative-field-crop-illustration-free-png.png" alt="crop image" style="border-radius: 50%; width: 150px; height: 150px; float:right;">
+                        <p class="welcome-heading" style="margin-left: 100px;">Types of Crops for <span>Production</span></p>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <a class="btn-primary" href="/project" role="button" style="background-color: rgb(195, 24, 24);margin-left: 500px;">Enter Soil Data</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer style="margin-top: 117px;color: black;">
+        &copy; 2024 Farmer Friends. All rights reserved.
+    </footer>
+</body>
+</html>
