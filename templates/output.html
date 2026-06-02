@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-photo/aipowered-agricultural-robot-tending-crops_978155-106.jpg" alt="Farmer Friends">
+            <div>
+                <p class="brand">Farmer <span>Friends</span></p>
+                <p class="tagline">Recommended crops for your soil profile.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="/" class="btn btn-secondary">Home</a>
+            <a href="/project" class="btn btn-primary">Try again</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="result-panel">
+            <article class="result-card">
+                <div class="result-hero">
+                    <span class="eyebrow">Crop suggestions</span>
+                    <h1>Your soil is ready for these crops</h1>
+                    <p>Browse the crops below and copy the list to save or share with your team.</p>
+                </div>
+                {% if crops %}
+                <div class="copy-actions">
+                    <button id="copy-button" class="btn btn-secondary">Copy crop list</button>
+                    <span class="status-note">Choose the crop that fits your farm best.</span>
+                </div>
+                {% else %}
+                <p class="status-note">No crop recommendations are available yet. Submit soil data first.</p>
+                {% endif %}
+            </article>
+
+            <div class="crops-container">
+                {% if crops %}
+                    {% for crop in crops %}
+                    <article class="crop-card">
+                        <img src="{{ url_for('static', filename='images/' + crop.image) }}" alt="{{ crop.name }}">
+                        <div class="crop-label">{{ crop.name }}</div>
+                    </article>
+                    {% endfor %}
+                {% else %}
+                    <article class="crop-card">
+                        <div class="crop-label">No crops to show</div>
+                        <p>Return to the form to generate recommendations based on your soil data.</p>
+                    </article>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        &copy; 2024 Farmer Friends. All rights reserved.
+    </footer>
+</body>
+</html>

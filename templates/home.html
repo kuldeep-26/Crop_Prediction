@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Friends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-photo/aipowered-agricultural-robot-tending-crops_978155-106.jpg" alt="Farmer Friends">
+            <div>
+                <p class="brand">Farmer <span>Friends</span></p>
+                <p class="tagline">AI-powered crop guidance for smarter farming.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="/project" class="btn btn-primary">Enter Soil Data</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-copy">
+                <span class="eyebrow">Faster decisions for better yields</span>
+                <h1>Find the best crops for your farm with smart soil guidance.</h1>
+                <p>Enter soil parameters and let the model recommend the most suitable crops for your land and climate.</p>
+                <div class="hero-actions">
+                    <a href="/project" class="btn btn-primary">Start now</a>
+                    <a href="#features" class="btn btn-secondary">See benefits</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/075/496/051/small_2x/expert-worker-managing-autonomous-robot-systems-via-a-smart-tablet-in-a-modern-agricultural-field-free-vector.jpg" alt="Agriculture AI illustration">
+            </div>
+        </section>
+
+        <section id="features" class="feature-grid">
+            <article class="feature-card">
+                <h3>Instant recommendations</h3>
+                <p>Get tailored crop suggestions immediately after submitting your soil data.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Visual guidance</h3>
+                <p>Browse crop cards with clear images and quick selection cues.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Easy data entry</h3>
+                <p>Numbers are validated and summarized so you can check inputs before submission.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        &copy; 2024 Farmer Friends. All rights reserved.
+    </footer>
+</body>
+</html>

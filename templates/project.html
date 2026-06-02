@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Parameter Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-photo/aipowered-agricultural-robot-tending-crops_978155-106.jpg" alt="Farmer Friends">
+            <div>
+                <p class="brand">Farmer <span>Friends</span></p>
+                <p class="tagline">Enter soil details and discover the best crops.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="/" class="btn btn-secondary">Back home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-panel">
+            <article class="form-container">
+                <h2>Enter Soil Parameters</h2>
+                <p>Use the form below to provide nutrient and climate data for your land.</p>
+                <form action="{{ url_for('submit') }}" method="post">
+                    <div class="field-grid">
+                        <div class="form-group">
+                            <label for="n">Nitrogen</label>
+                            <input type="number" step="any" id="n" name="n" required placeholder="12">
+                        </div>
+                        <div class="form-group">
+                            <label for="p">Phosphorus</label>
+                            <input type="number" step="any" id="p" name="p" required placeholder="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="k">Potassium</label>
+                            <input type="number" step="any" id="k" name="k" required placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label for="temperature">Temperature (°C)</label>
+                            <input type="number" step="any" id="temperature" name="temperature" required placeholder="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="humidity">Humidity (%)</label>
+                            <input type="number" step="any" id="humidity" name="humidity" required placeholder="70">
+                        </div>
+                        <div class="form-group">
+                            <label for="ph">pH</label>
+                            <input type="number" step="any" id="ph" name="ph" required placeholder="6.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="rainfall">Rainfall (mm)</label>
+                            <input type="number" step="any" id="rainfall" name="rainfall" required placeholder="120">
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <span class="live-summary">Start entering soil values to preview your recommendation input.</span>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                    </div>
+                </form>
+            </article>
+            <aside class="result-card">
+                <h2>How it works</h2>
+                <p>Values are scaled and clustered by the model to match the most suitable crop group for your soil.</p>
+                <div class="summary-grid">
+                    <section class="feature-card">
+                        <h3>Live validation</h3>
+                        <p>The form highlights invalid values while you type.</p>
+                    </section>
+                    <section class="feature-card">
+                        <h3>Fast results</h3>
+                        <p>The system returns crop recommendations immediately after submission.</p>
+                    </section>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        &copy; 2024 Farmer Friends. All rights reserved.
+    </footer>
+</body>
+</html>
